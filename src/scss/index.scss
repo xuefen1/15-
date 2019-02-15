@@ -1,0 +1,107 @@
+@import "common.scss";
+@import "_minix.scss";
+$font-size:37.5px !default;
+@function rem($px) {
+    @return $px / $font-size * 1rem;
+}
+
+%Center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$bg:background;
+$bor:border;
+$pd:padding;
+$mg:margin;
+* {
+    @include sizing;
+    font-family: "微软雅黑";
+}
+.wrap{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+}
+header{
+    width:100%;
+    height:rem(40px);
+    background: #000;
+    display: flex;
+    justify-content:space-between;
+    line-height: rem(40px);
+    padding: 0 20px;
+    overflow: hidden;
+    span{
+        color:#fff;
+    }
+}
+main{
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+}
+footer{
+    width: 100%;
+    height:rem(50px);
+    background: #eee;
+}
+
+// 轮播图
+.swiper-container{
+    width:100%;
+    height:rem(160px);
+    overflow: hidden;
+    .swiper-wrapper{
+        width:100%;
+        height:rem(160px);
+        .blue{
+            width:100%;
+            height:rem(160px);
+            background: blue;
+        }
+        .red{
+            width:100%;
+            height:rem(160px);
+            background: red;
+        }
+        .orange{
+            width:100%;
+            height:rem(160px);
+            background: orange;
+        }
+    }
+}
+// 列表
+.list{
+    width:100%;
+    height:auto;
+    >p{
+        width: 100%;
+        height:rem(40px);
+        display: flex;
+        justify-content: space-around;
+        line-height:rem(40px);
+        span:nth-child(1){
+            color:red;
+        }
+    }
+    .list-box{
+        width:100%;
+        height:auto;
+        dl{
+            width:45%;
+            height:rem(120px);
+            background: #eee;
+            display: flex;
+            justify-content: space-around;
+            flex-flow: wrap;
+            display: inline-block;
+        }
+    }
+}
+
+
+
