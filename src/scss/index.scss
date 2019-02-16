@@ -47,6 +47,12 @@ footer{
     width: 100%;
     height:rem(50px);
     background: #eee;
+    display: flex;
+    justify-content: space-around;
+    line-height:rem(50px);
+    span{
+        display: inline-block;
+    }
 }
 
 // 轮播图
